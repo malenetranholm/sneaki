@@ -1,0 +1,27 @@
+#app {
+  background-image: url('../images/bgimage.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+
+}
+#header-trans{
+  height: 220vh;
+
+}
+
+.v-application .indigo {
+  background-color: #ffffff00 !important;
+}
+
+.v-toolbar {
+  box-shadow: none;
+}
+
+
+#product-holder {
+  border: 1px red;
+  color: rgb(202, 201, 201);
+  height: 200px;
+  width: 70px;
+  
+}

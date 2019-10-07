@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="app">
+    <v-app id="app">
+      <v-navigation-drawer
+        v-model="drawer"
+        flat
+        hide-overlay
+        flat="true"
+        app
+      >
+        <v-list dense>
+          <v-list-item @click="">
+            <v-list-item-action>
+              <v-icon>mdi-home</v-icon>
+            </v-list-item-action>
+            <v-list-item-content>
+              <v-list-item-title>Home</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+          <v-list-item @click="">
+            <v-list-item-action>
+              <v-icon>mdi-contact-mail</v-icon>
+            </v-list-item-action>
+            <v-list-item-content>
+              <v-list-item-title>Contact</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </v-list>
+      </v-navigation-drawer>
+  
+      <v-app-bar
+        app
+        color="indigo"
+        dark
+      >
+        <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+        <v-toolbar-title>Toms chokolade og M&M  - Sæt logo ind her.. hahah </v-toolbar-title>
+      </v-app-bar>
+  
+      <v-content>
+        <v-container
+ 
+          fluid
+        >
+          
+
+
+          <v-row>
+            <v-col>Carrous</v-col>
+          </v-row>
+
+          <v-row id="header-trans">
+
+              <v-col>test</v-col>
+            </v-row>
+
+          <v-row
+          align="center"
+          justify="center"
+        >
+          <v-col cols="12">
+            <v-hover v-slot:default="{ hover }">
+              <v-card
+                :elevation="hover ? 12 : 2"
+                class="mx-auto"
+                height="350"
+                max-width="350"
+              >
+                <v-card-text class="my-4 text-center title">
+                    
+                  
+                    <v-row>
+                        <v-col id="product-holder">
+            
+                            <div class="product">
+                        
+                      </div>
+                      </v-col>
+                    </v-row>
+                    <font size="2">
+                    <div class="product-brand"> Adidas originals</div>
+                    <div class="product-name">adidas x human race x human made NMD</div>
+                    <div class="product-price">2.000 dkk</div>
+                  </font>
+                  </v-card-text>
+              </v-card>
+            </v-hover>
+          </v-col>
+        </v-row>
+
+          
+
+
+          <v-row>
+            <v-col>Footer</v-col>
+          </v-row>
+
+
+
+        
+        </v-container>
+      </v-content>
+    
+    </v-app>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
