@@ -6,6 +6,7 @@
   <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
   <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
   <div id="app">
@@ -43,17 +44,24 @@
         dark
       >
         <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-        <v-toolbar-title>Toms chokolade og M&M  - Sæt logo ind her.. hahah </v-toolbar-title>
-      </v-app-bar>
+        <v-toolbar-title>
+        <v-row>
+          <v-col cols="12" sm="5"> 
+             </v-col>
+            
+          <v-col cols="12" sm="5"> <img src="images/sneaki logo.svg" alt=""> 
+            </v-col>
+
+          <v-col cols="12" sm="2"> basket
+            </v-col>
+          </v-row>
+      </v-toolbar-title>
+
+    </v-app-bar>
   
       <v-content>
-        <v-container
- 
-          fluid
-        >
+        <v-container fluid>
           
-
-
           <v-row>
             <v-col>Carrous</v-col>
           </v-row>
@@ -63,10 +71,7 @@
               <v-col>test</v-col>
             </v-row>
 
-          <v-row
-          align="center"
-          justify="center"
-        >
+          <v-row align="center" justify="center" >
           <v-col cols="12">
             <v-hover v-slot:default="{ hover }">
               <v-card
@@ -82,15 +87,17 @@
                         <v-col id="product-holder">
             
                             <div class="product">
-                        
+                              <div class="product-image">
+                                <img src="https://assets.partyking.org/img/products/1300/folieballong-my-little-pony-shape-1.jpg" alt="">
+                              </div>
+                              <div class="product-brand"> Adidas originals</div>
+                              <div class="product-name">adidas x human race x human made NMD</div>
+                              <div class="product-price">2.000 dkk</div>
+            
                       </div>
                       </v-col>
                     </v-row>
-                    <font size="2">
-                    <div class="product-brand"> Adidas originals</div>
-                    <div class="product-name">adidas x human race x human made NMD</div>
-                    <div class="product-price">2.000 dkk</div>
-                  </font>
+       
                   </v-card-text>
               </v-card>
             </v-hover>
@@ -118,3 +125,8 @@
   <script src="js/app.js"></script>
 </body>
 </html>
+
+<!--
+jesper
+-->
+

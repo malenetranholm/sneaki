@@ -2,13 +2,13 @@
   background-image: url('../images/bgimage.jpg');
   background-repeat: no-repeat;
   background-size: contain;
-
 }
 #header-trans{
   height: 220vh;
-
 }
-
+.v-toolbar__title {
+  width:100%;
+}
 .v-application .indigo {
   background-color: #ffffff00 !important;
 }
@@ -17,11 +17,24 @@
   box-shadow: none;
 }
 
-
+.product-image {
+height: 200px;
+width: 100%;
+}
+.product-image img {
+  height: 200px;
+  width: 100%; 
+}
 #product-holder {
-  border: 1px red;
+  
+  border: 1px red solid;
   color: rgb(202, 201, 201);
   height: 200px;
   width: 70px;
-  
+}
+
+/* comment */
+
+.product-brand {
+  color: red;
 }
