@@ -6,12 +6,15 @@
   <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
   <link rel="stylesheet" href="css/style.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
 
 </head>
 <body>
   <div id="app">
     <v-app id="app">
-      <v-navigation-drawer
+      <v-navigation-drawer id="navigation"
         v-model="drawer"
         flat
         hide-overlay
@@ -21,20 +24,21 @@
         <v-list dense>
           <v-list-item @click="">
             <v-list-item-action>
-              <v-icon>mdi-home</v-icon>
+              <v-icon class="primary--text">mdi-home</v-icon>
             </v-list-item-action>
             <v-list-item-content>
-              <v-list-item-title>Home</v-list-item-title>
+              <v-list-item-title class="primary--text">Home</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
           <v-list-item @click="">
             <v-list-item-action>
-              <v-icon>mdi-contact-mail</v-icon>
+              <v-icon class="primary--text">mdi-contact-mail</v-icon>
             </v-list-item-action>
             <v-list-item-content>
-              <v-list-item-title>Contact</v-list-item-title>
+              <v-list-item-title class="primary--text">Contact</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
+          
         </v-list>
       </v-navigation-drawer>
   
@@ -46,13 +50,14 @@
         <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
         <v-toolbar-title>
         <v-row>
-          <v-col cols="12" sm="5"> 
-             </v-col>
-            
-          <v-col cols="12" sm="5"> <img src="images/sneaki logo.svg" alt=""> 
-            </v-col>
+  
 
-          <v-col cols="12" sm="2"> basket
+          <v-col cols="12" sm="11" id="logo" ><img src="images/sneaki logo.svg" alt=""> 
+            
+          </v-col>
+
+
+          <v-col cols="12" sm="1"> <i class="fa fa-shopping-basket" style="font-size:24px;"></i>
             </v-col>
           </v-row>
       </v-toolbar-title>
@@ -62,57 +67,189 @@
       <v-content>
         <v-container fluid>
           
-          <v-row>
-            <v-col>Carrous</v-col>
-          </v-row>
+        
 
           <v-row id="header-trans">
 
-              <v-col>test</v-col>
+              <v-col>
+                <h4>New styles</h4>
+                <h5>Everyday</h5>
+              </v-col>
             </v-row>
 
-          <v-row align="center" justify="center" >
-          <v-col cols="12">
-            <v-hover v-slot:default="{ hover }">
-              <v-card
-                :elevation="hover ? 12 : 2"
-                class="mx-auto"
-                height="350"
-                max-width="350"
-              >
-                <v-card-text class="my-4 text-center title">
-                    
+            <v-row  id="header-btn">
+                <v-col class="text-center" cols="25" sm="12">
+                  <div class="my-2">
+                    <v-btn outlined color="primary" x-large id="all-btn">Buy Now</v-btn>
+                  </div>
+                </v-col>
+              </v-row>
+              <v-row id="transparent-pusher">
+                
+              </v-row>
+
+              <v-row id="main-row">
+                <v-col>
                   
-                    <v-row>
-                        <v-col id="product-holder">
-            
-                            <div class="product">
-                              <div class="product-image">
-                                <img src="https://assets.partyking.org/img/products/1300/folieballong-my-little-pony-shape-1.jpg" alt="">
-                              </div>
-                              <div class="product-brand"> Adidas originals</div>
-                              <div class="product-name">adidas x human race x human made NMD</div>
-                              <div class="product-price">2.000 dkk</div>
-            
-                      </div>
-                      </v-col>
-                    </v-row>
-       
-                  </v-card-text>
-              </v-card>
-            </v-hover>
-          </v-col>
-        </v-row>
+                    <v-row align="center" justify="center" >
+                        <v-col cols="12">
+                          <v-hover v-slot:default="{ hover }">
+                            <v-card
+                              :elevation="hover ? 12 : 2"
+                              class="mx-auto"
+                              height="550"
+                              max-width="350"
+                            >
+                              <v-card-text class="my-4 text-center title">
+                                  
+                                
+                                  <v-row>
+                                      <v-col id="product-holder">
+                          
+                                          <div class="product">
+                                            
+                                            <div class="product-image">
+                                            
+                                              <img src="https://www.nakedcph.com/images/26518/original.jpg" alt="">
+                                            </div>
+                                            <div class="product-brand"> Adidas originals</div>
+                                            <div class="product-name">adidas x human race x human made NMD</div>
+                                            <div class="product-price">2.000 dkk</div>
+                          
+                                    </div>
+                                    </v-col>
+                          
+                                  </v-row>
+                     
+                                </v-card-text>
+                            </v-card>
+                          </v-hover>
+                        </v-col>
+                        <v-col>
+                  
+                            <v-row align="center" justify="center" >
+                                <v-col cols="12">
+                                  <v-hover v-slot:default="{ hover }">
+                                    <v-card
+                                      :elevation="hover ? 12 : 2"
+                                      class="mx-auto"
+                                      height="550"
+                                      max-width="350"
+                                    >
+                                      <v-card-text class="my-4 text-center title">
+                                          
+                                        
+                                          <v-row>
+                                              <v-col id="product-holder">
+                                  
+                                                  <div class="product">
+                                                    
+                                                    <div class="product-image">
+                                                    
+                                                      <img src="https://www.nakedcph.com/images/26518/original.jpg" alt="">
+                                                    </div>
+                                                    <div class="product-brand"> Adidas originals</div>
+                                                    <div class="product-name">adidas x human race x human made NMD</div>
+                                                    <div class="product-price">2.000 dkk</div>
+                                  
+                                            </div>
+                                            </v-col>
+                                  
+                                          </v-row>
+                             
+                                        </v-card-text>
+                                    </v-card>
+                                  </v-hover>
+                                </v-col>
+                                <v-col>
+                  
+                                    <v-row align="center" justify="center" >
+                                        <v-col cols="12">
+                                          <v-hover v-slot:default="{ hover }">
+                                            <v-card
+                                              :elevation="hover ? 12 : 2"
+                                              class="mx-auto"
+                                              height="550"
+                                              max-width="350"
+                                            >
+                                              <v-card-text class="my-4 text-center title">
+                                                  
+                                                
+                                                  <v-row>
+                                                      <v-col id="product-holder">
+                                          
+                                                          <div class="product">
+                                                            
+                                                            <div class="product-image">
+                                                            
+                                                              <img src="https://www.nakedcph.com/images/26518/original.jpg" alt="">
+                                                            </div>
+                                                            <div class="product-brand"> Adidas originals</div>
+                                                            <div class="product-name">adidas x human race x human made NMD</div>
+                                                            <div class="product-price">2.000 dkk</div>
+                                          
+                                                    </div>
+                                                    </v-col>
+                                          
+                                                  </v-row>
+                                     
+                                                </v-card-text>
+                                            </v-card>
+                                          </v-hover>
+                                        </v-col>
+                      </v-row>
 
-          
 
+
+                </v-col>
+              </v-row>
+
+         
 
           <v-row>
-            <v-col>Footer</v-col>
+            <footer>    
+              <div id="footer_container">
+                  <div id="footer_top">
+                    <p> Subscribe to our newsletter</p>
+                    <h2>And get 10% off your first order</h2>
+                   
+                   </div>
+                   <div id="footer_bottom">
+                       <div id="footer_box">
+                        <h3> Contact </h3>
+                        <p>food</p>
+                        <p>acomondations</p>
+                        <p>facilities</p>
+                    </div>
+                     
+                       <div id="footer_box">
+                            <h3> Help </h3>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                       </div>
+                   
+                   </div>
+                   <div id="footer_box_1">
+                      <div id="footer_social_box">
+
+
+                           <a href="#"><i class="fa fa-pinterest" style="font-size: 24px;" aria-hidden="true"></i>
+                           </a>
+                           <a href="#"><i class="fa fa-snapchat-ghost" style="font-size: 24px;" aria hidden="true"></i>
+                           </a>
+                           <a href="#"><i class="fa fa-twitter" style="font-size: 24px;" aria hidden=""></i>
+                           </a>
+                           <a href="#"><i class="fa fa-envelope-o" style="font-size: 24px;" aria-hidden="true"></i>
+                           </a>
+                           <a href="#"><i class="fa fa-facebook" style="font-size: 24px;" aria-hidden="true"></i>
+                           </a>
+                           <a href="#"><i class="fa fa-instagram" style="font-size: 24px;" aria-hidden="true"></i>
+                           </a>
+                      </div>
+                  </div>
+            </footer>
           </v-row>
-
-
-
         
         </v-container>
       </v-content>
@@ -129,4 +266,6 @@
 <!--
 jesper
 -->
+
+
 

@@ -7,8 +7,8 @@ var app = new Vue({
     theme: {
       themes: {
         light: {
-          primary: '#ff00ff',
-          secondary: '#00ffff',
+          primary: '#ffffff',
+          secondary: '#1D2B45',
           accent: '#8c9eff',
           error: '#b71c1c',
         },
